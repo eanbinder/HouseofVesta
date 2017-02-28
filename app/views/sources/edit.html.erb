@@ -1,0 +1,39 @@
+<h1>Edit a Source:</h1>
+
+<%= form_for(@source) do |f| %>
+    <ul>
+        <li>
+            <%= f.label :title %>
+            <%= f.text_field :title %>
+        </li>
+        <li>
+            <%= f.label :year %>
+            <%= f.number_field :year %>
+        </li>
+        <li>
+            <%= f.label :access_link %>
+            <%= f.text_field :access_link %>
+        </li>
+        <li>
+            <%= f.label :is_free %>
+            <%= f.check_box :is_free %>
+        </li>
+        <li>
+            <%= f.label :site_name %>
+            <%= f.text_field :site_name %>
+        </li>
+        <li>
+            <%= f.label :publication %>
+            <%= f.text_field :publication %>
+        </li>
+        <li>
+            <%= f.label :additional_info %>
+            <%= f.text_field :additional_info %>
+        </li>
+        <li>
+            <%= f.label :description %>
+            <%= f.text_area :description %>
+        </li>
+    </ul>
+<%= f.submit(class: "button") %>
+<% end %>
