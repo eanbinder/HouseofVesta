@@ -8,8 +8,6 @@ class CreateSources < ActiveRecord::Migration[5.0]
         t.string :access_link
         t.string :site_name
         t.string :publication
-        t.string :additional_info
-        t.text :description
         t.timestamps
     end
   end

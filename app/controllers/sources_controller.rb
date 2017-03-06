@@ -34,7 +34,7 @@ class SourcesController < ApplicationController
     end
     
     def source_params
-        params.require(:source).permit(:title, :year, :is_free, :access_link, :site_name, :publication, :additional_info, :description)
+        params.require(:source).permit(:title, :year, :is_free, :access_link, :site_name, :publication, :additional_info, :description, :tag_list)
     end
         
 end
