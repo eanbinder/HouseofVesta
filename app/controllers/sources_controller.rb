@@ -33,8 +33,16 @@ class SourcesController < ApplicationController
         redirect_to sources_path
     end
     
+    def tagged
+        if params[:tag].present?
+            @sources = Source.tagged_with(params[:tag])
+        else
+            @sources = Source.all
+        end
+    end
+    
     def source_params
-        params.require(:source).permit(:title, :year, :is_free, :access_link, :site_name, :publication, :additional_info, :description, :tag_list)
+        params.require(:source).permit(:title, :year, :is_free, :access_link, :site_name, :publication, :additional_info, :description, :tag_list, :subject_list, :warning_list)
     end
         
 end

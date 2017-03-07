@@ -17,8 +17,7 @@ Web app will allow users to search a curated database of academic sources on anc
 ---
 ###TODO###
 
-* Back end tags
-* Front end tags
+* Front end tags fix UI
 * Front end author
 * Autocomplete
 * Spreadsheets

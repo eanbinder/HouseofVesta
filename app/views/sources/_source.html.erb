@@ -1,0 +1,8 @@
+<h4><%= source.title %></h4>
+    <%= source.year %>
+<%= for source.authors do |f| %>
+    <% author_name = f.first_name + " " + f.last_name %>
+    <% if f = source.authors.last %>
+        <% author_name += ", " %>
+    <% end %>
+<%= end %>

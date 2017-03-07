@@ -9,8 +9,12 @@
         <dd><%= @source.publication %></dd>
     <dt>Additional Info:</dt>
         <dd><%= @source.additional_info %></dd>
-    <dt>Description</dt>
+    <dt>Description:</dt>
         <dd><%= @source.description %></dd>
+    <dt>Subject Tags:</dt>
+    <% @source.subjects.each do |tag| %>
+        <dd> <%= link_to tag.name, tagged_url(:tag => tag.name) %></dd>
+    <% end %>
 </dl>
 
 <%= link_to "Edit Source", edit_source_path(@source), class: "button" %>
